@@ -1,0 +1,11 @@
+/* pages/article/article.wxss */
+@import "../../template/template.wxss";
+
+swiper {
+  width: 100%;
+}
+
+swiper image {
+  width: 100%;
+  height: 378rpx;
+}

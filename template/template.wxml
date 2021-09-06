@@ -1,0 +1,6 @@
+<template name="news">
+  <view>
+    <text>{{item.text}} {{i}}</text>
+    <view><text>{{item.desc}}</text> </view>
+  </view>
+</template>
