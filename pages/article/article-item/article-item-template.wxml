@@ -1,0 +1,23 @@
+<template name="news">
+  <view class="article-container">
+    <view class="article-header">
+      <image class="avatar" src="{{avatar}}"></image>
+      <text class="date">{{date}}</text>
+    </view>
+    <view class="article-content">
+      <text class="title">{{title}}</text>
+      <image class="poster" src="{{imgSrc}}"></image>
+      <text class="content">{{content}}</text>
+    </view>
+    <view class="article-footer">
+      <view class="collect">
+        <image class="icon-collect" src="/images/icon/none-star.png"></image>
+        <text>{{collection}}</text>
+      </view>
+      <view class="read">
+        <image class="icon-read" src="/images/icon/view.png"></image>
+        <text>{{reading}}</text>
+      </view>
+    </view>
+  </view>
+</template>

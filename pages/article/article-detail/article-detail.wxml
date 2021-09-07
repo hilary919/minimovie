@@ -1,0 +1,25 @@
+<view>
+  <view class="banner">
+    <image class="header-img" src="{{playing ? curArticle.music.coverImg : curArticle.headImgSrc}}"></image>
+    <view class="music-wrap">
+      <image bindtap="onMusicTap" class="music-img" src="{{playing ? '/images/music/music-stop.png' : '/images/music/music-start.png'}}"></image>
+    </view>
+  </view>
+  <view class="content">
+    <view class="content-header">
+      <view class="author-intros">
+        <image class="avatar" src="{{curArticle.avatar}}"></image>
+        <text class="author">{{curArticle.author}}</text>发表于<text class="date">{{curArticle.dateTime}}</text>
+      </view>
+      <text class="title">{{curArticle.title}}</text>
+      <view class="tools">
+        <image wx:if="{{collected}}" bindtap="onCollectTap" src="/images/icon/collection.png"></image>
+        <image wx:else bindtap="onCollectTap" src="/images/icon/collection-anti.png"></image>
+        <image bindtap="onShareTap" src="/images/icon/share.png"></image>
+      </view>
+    </view>
+    <view class="content-body">
+      {{curArticle.detail}} 
+    </view>
+  </view>
+</view>
