@@ -13,8 +13,8 @@ Page({
   },
   // 事件处理函数
   bindViewTap() {
-    wx.navigateTo({
-      url: '../article/article'
+    wx.switchTab({
+      url: '../article/article',
     })
   },
   onLoad() {

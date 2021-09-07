@@ -1,0 +1,19 @@
+.stars-container {
+  display: flex;
+  align-items: center;
+  color: #1f3463;
+  font-size: 22rpx;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  height: 17rpx;
+  margin-right: 20rpx;
+}
+
+.stars image {
+  padding-left: 3rpx;
+  height: 17rpx;
+  width: 17rpx;
+}

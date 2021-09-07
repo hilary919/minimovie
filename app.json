@@ -1,16 +1,39 @@
 {
-  "pages":[
+  "pages": [
+    "pages/movies/movies",
     "pages/index/index",
+    "pages/movies/movies-detail/movies-detail",
+    "pages/movies/movies-more/movies-more",
     "pages/article/article",
     "pages/article/article-detail/article-detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "影音资讯",
+    "navigationBarTextStyle": "black"
   },
-  "requiredBackgroundModes": ["audio", "location"],
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "tabBar": {
+    "selectedColor": "#405f80",
+    "list": [
+      {
+        "pagePath": "pages/movies/movies",
+        "iconPath": "images/tab/dianying.png",
+        "selectedIconPath": "images/tab/dianying_hl.png",
+        "text": "电影"
+      },
+      {
+        "pagePath": "pages/article/article",
+        "iconPath": "images/tab/yuedu.png",
+        "selectedIconPath": "images/tab/yuedu_hl.png",
+        "text": "文章"
+      }
+    ]
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
