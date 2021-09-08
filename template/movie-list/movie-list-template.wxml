@@ -7,7 +7,7 @@
       <text data-id="{{movies.id}}" class="moviemore" bindtap="onMoreTap">更多 ></text>
     </view>
     <view class="movie-list">
-      <block wx:for="{{movies.data}}" wx:for-item="movie">
+      <block wx:for="{{movies.data}}" wx:for-item="movie" wx:key="key">
         <template is="movie-template" data="{{...movie}}"></template>
       </block>
     </view>

@@ -1,2 +1,7 @@
-<!--pages/movies/movies-more/movies-more.wxml-->
-<text>pages/movies/movies-more/movies-more.wxml</text>
+<import src="/template/movie/movie-template.wxml"></import>
+
+<view class="movies-more-container">
+    <block wx:for="{{moviesData.data}}" wx:for-item="movie" wx:key="key">
+        <template is="movie-template" data="{{...movie}}"></template>
+    </block>
+</view>

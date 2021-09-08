@@ -12,7 +12,7 @@
       <image src="/images/iqiyi.png" data-id="5"></image>
     </swiper-item>
   </swiper>
-  <block wx:for="{{content}}" wx:for-item="item" wx:for-index="i">
+  <block wx:for="{{content}}" wx:for-item="item" wx:for-index="i" wx:key="key">
     <view bindtap="onItemTap" data-id="{{item.postId}}">
       <template is="news" data="{{...item}}"></template>
     </view>

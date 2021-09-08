@@ -94,6 +94,12 @@ var top = {
     "name": "法医秦明之亡命救赎",
     "img": "https:\/\/img9.doubanio.com\/view\/photo\/s_ratio_poster\/public\/p2576105225.jpg",
     "rating": "4.3"
+  }, {
+    "order": 1,
+    "id": "30219670",
+    "name": "罪途2之救赎代价",
+    "img": "https:\/\/img1.doubanio.com\/view\/photo\/s_ratio_poster\/public\/p2548070168.jpg",
+    "rating": "6.6"
   }],
   "msg": "请求成功"
 }

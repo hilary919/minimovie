@@ -1,7 +1,7 @@
 <import src="/template/movie-list/movie-list-template.wxml"></import>
 
 <view class="movies-container">
-  <block wx:for="{{moviesData}}" wx:for-item="movies">
+  <block wx:for="{{moviesData}}" wx:for-item="movies" wx:key="key">
     <view class="movie-item">
       <template is="movielist-template" data="{{movies}}"></template>
     </view>

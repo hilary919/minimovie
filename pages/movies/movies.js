@@ -1,3 +1,4 @@
+var util = require('../../utils/util')
 var movies = require('../../data/movies')
 Page({
 
@@ -12,27 +13,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var moviesData = []
-    if (movies.hotMovies.code == 200) {
-      var hotMovies = {
-        id: movies.hotMovies.id,
-        type: movies.hotMovies.type,
-        data: movies.hotMovies.data.slice(0, 3)
-      }
-      moviesData.push(hotMovies)
-    }
-
-    if (movies.topMovies.code == 200) {
-      var topMovies = {
-        id: movies.topMovies.id,
-        type: movies.topMovies.type,
-        data: movies.topMovies.data.slice(0, 3)
-      }
-      moviesData.push(topMovies)
-    }
-
     this.setData({
-      moviesData: moviesData
+      moviesData: this.getMoviesData()
     })
 
     // wx.request({
@@ -43,17 +25,24 @@ Page({
     // })
   },
 
-  getMoviesData: function (type) {
-    var data = {}
-    var typeMovie = movies[type]
-    if (typeMovie && typeMovie.code == 200) {
-      data = {
-        id: typeMovie.id,
-        type: typeMovie.type,
-        data: typeMovie.data.slice(0, 3)
+  getMoviesData: function () {
+    var moviesData = []
+    var type = ['hotMovies', 'topMovies']
+    type.forEach(item => {
+      var typeMovie = movies[item]
+      if (typeMovie && typeMovie.code == 200) {
+        var movieData = typeMovie.data.slice(0, 3)
+        movieData.map(item => {
+          item['stars'] = util.calcStars(item.rating)
+        })
+        moviesData.push({
+          id: typeMovie.id,
+          type: typeMovie.type,
+          data: movieData
+        })
       }
-      // typeMovie.data.slice(0, 3)
-    }
+    })
+    return moviesData
   },
 
   onMovieTap: function (e) {

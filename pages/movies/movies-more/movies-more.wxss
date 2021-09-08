@@ -1,1 +1,16 @@
-/* pages/movies/movies-more/movies-more.wxss */
+@import '/template/movie/movie-template.wxss';
+
+.movies-more-container {
+    padding: 0 30rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.movie-container {
+    margin-bottom: 30rpx;
+}
+
+.movie-container:last-child:nth-child(3n-1) {
+    margin-right: calc(200rpx + (100% - 600rpx) / 2);
+}
